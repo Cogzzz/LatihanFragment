@@ -36,10 +36,10 @@ class SettingsFragment : Fragment() {
         radioGroup = view.findViewById(R.id.difficultyGroup)
         saveButton = view.findViewById(R.id.button_save)
 
-        // Initialize SharedPreferences
+        // inisiasi SharedPreferences untuk menyimpan pengaturan permainan
         sharedPreferences = requireActivity().getSharedPreferences("GameSettings", Context.MODE_PRIVATE)
 
-        // Load saved maximum number
+        // Inisialisasi radio button berdasarkan pengaturan dan maximumk number untuk nilai mkasimum yang ditampilkan di gamefragment
         val savedMaxNumber = sharedPreferences.getInt("max_number", 5)
         when (savedMaxNumber) {
             3 -> radioGroup.check(R.id.jumlah3)
